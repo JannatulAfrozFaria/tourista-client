@@ -6,11 +6,11 @@ import Footer from './Footer';
 const Root = () => {
     return (
         <div>
-            <div className="max-w-6xl mx-auto font-poppins">
+            <div className="mx-auto font-poppins">
                 <Navbar></Navbar>
                 <Outlet></Outlet>
             </div>
-            <Footer ></Footer>
+            <Footer className='w-full' ></Footer>
         </div>
     );
 };

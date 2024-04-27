@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     useEffect(()=>{
-        document.title = "BluePrint Realty | Login"
+        document.title = "Tourista | Login"
     },[])
     //state for error in password
     const [loginError,setLoginError] = useState('');

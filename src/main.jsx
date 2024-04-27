@@ -12,6 +12,7 @@ import Login from './Components/Pages/Login.jsx';
 import Register from './Components/Pages/Register.jsx';
 import Home from './Components/Pages/Home.jsx';
 import AuthProvider from './Components/Provider/AuthProvider.jsx';
+import AllTouristSpot from './Components/Pages/AllTouristSpot.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: '/alltouristspot',
+        element: <AllTouristSpot></AllTouristSpot>
       },
       {
         path: '/login',

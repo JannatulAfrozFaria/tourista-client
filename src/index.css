@@ -3,3 +3,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.theme-color{
+    color:rgb(7, 118, 95);
+}
+.theme-light{
+    color: rgb(57, 158, 138);
+}
+.basic-btn{
+    color: white;
+    background-color:rgb(7, 118, 95) !important ;
+    font-weight: bold;
+}
+.active{
+    background-color:rgb(7, 118, 95) !important ;
+    font-weight: bold;
+}

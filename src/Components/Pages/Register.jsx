@@ -10,7 +10,7 @@ import {auth} from '../FireBase/firebase.config';
 const Register = () => {
     //Dynamic Title
     useEffect(()=>{
-        document.title = "BluePrint Realty | Register"
+        document.title = "Tourista | Register"
     },[])
     //state for error in password
     const [registerError,setRegisterError] = useState('');

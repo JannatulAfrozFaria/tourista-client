@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer data-aos="flip-down" data-aos-duration="2000" className="footer footer-center mt-10 p-10 bg-blue-100 text-base-content rounded theme-color">
+        <footer data-aos="flip-down" data-aos-duration="2000" className="footer footer-center mt-10 p-10 bg-green-50 text-base-content rounded theme-color">
             <h3 className="text-3xl">Tourista</h3>
             <nav className="grid grid-flow-col gap-4">
                 <a className="link link-hover">About us</a>
