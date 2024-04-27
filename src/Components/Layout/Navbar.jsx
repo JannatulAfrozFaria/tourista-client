@@ -35,7 +35,7 @@ const Navbar = () => {
                     {Links}
                 </ul>
                 </div>
-                <a className="btn btn-ghost text-xl theme-color">BluePrint Realty</a>
+                <a className="btn btn-ghost text-xl theme-color">Tourista</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

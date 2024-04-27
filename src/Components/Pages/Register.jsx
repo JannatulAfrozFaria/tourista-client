@@ -1,13 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 // import Result from 'postcss/lib/result';
-import { AuthContext } from '../context/AuthProvider';
+import { AuthContext } from '../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye,FaEyeSlash} from "react-icons/fa";
 import { updateProfile } from 'firebase/auth';
 import {auth} from '../FireBase/firebase.config';
-import 'react-calendar/dist/Calendar.css';
 const Register = () => {
     //Dynamic Title
     useEffect(()=>{
