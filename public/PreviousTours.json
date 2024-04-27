@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.postimg.cc/bwRW2sTM/4b45e1a05f2d3f1921fe055acacf5ddc.jpg",
+      "city_name": "Dhaka",
+      "country_name": "Bangladesh",
+      "destinations_visited": ["Sundarbans", "Cox's Bazar", "Srimangal"],
+      "tour_description": "Experience the diverse landscapes and rich culture of Bangladesh on this immersive tour. Explore the mangrove forests of Sundarbans, relax on the beaches of Cox's Bazar, and savor the tea gardens of Srimangal.",
+      "occurring_date": "2023-05-15",
+      "total_persons_attended": 50
+    },
+    {
+      "id": 2,
+      "image": "https://i.postimg.cc/m2JjRtNZ/boat-planning-a-trip-to-thailand-1657869489-785-X440.jpg",
+      "city_name": "Bali",
+      "country_name": "Indonesia",
+      "destinations_visited": ["Ubud", "Kuta", "Nusa Penida"],
+      "tour_description": "Discover the enchanting beauty of Bali on this unforgettable tour. Visit the cultural hub of Ubud, lounge on the beaches of Kuta, and explore the pristine landscapes of Nusa Penida.",
+      "occurring_date": "2023-07-20",
+      "total_persons_attended": 40
+    },
+    {
+      "id": 3,
+      "image": "https://i.postimg.cc/q7dTnz9H/boat-planning-a-trip-to-thailand-1657869489-785-X440.jpg",
+      "city_name": "Bangkok",
+      "country_name": "Thailand",
+      "destinations_visited": ["Bangkok", "Chiang Mai", "Phuket"],
+      "tour_description": "Immerse yourself in the vibrant culture and stunning scenery of Thailand on this exciting tour. Explore bustling Bangkok, trek through the jungles of Chiang Mai, and unwind on the beaches of Phuket.",
+      "occurring_date": "2023-09-10",
+      "total_persons_attended": 60
+    },
+    {
+      "id": 4,
+      "image": "https://i.postimg.cc/3NP9PHZ2/5003747917-e9dd2e413e-b.jpg",
+      "city_name": "Kuala Lumpur",
+      "country_name": "Malaysia",
+      "destinations_visited": ["Kuala Lumpur", "Langkawi", "Penang"],
+      "tour_description": "Experience the best of Malaysia on this captivating tour. Discover the modern metropolis of Kuala Lumpur, island hop in Langkawi, and indulge in the culinary delights of Penang.",
+      "occurring_date": "2023-10-25",
+      "total_persons_attended": 45
+    },
+    {
+      "id": 5,
+      "image": "https://i.postimg.cc/x1F29GpJ/Phnom-Penh-header.jpg",
+      "city_name": "Siem Reap",
+      "country_name": "Cambodia",
+      "destinations_visited": ["Angkor Wat", "Tonle Sap Lake", "Phnom Penh"],
+      "tour_description": "Journey through the ancient wonders of Cambodia on this mesmerizing tour. Explore the majestic temples of Angkor Wat, cruise the waters of Tonle Sap Lake, and discover the vibrant capital of Phnom Penh.",
+      "occurring_date": "2023-11-15",
+      "total_persons_attended": 35
+    },
+    {
+      "id": 6,
+      "image": "https://i.postimg.cc/2SNkP7Jz/Luon-Cave-in-Halong-Bay.jpg",
+      "city_name": "Hanoi",
+      "country_name": "Vietnam",
+      "destinations_visited": ["Halong Bay", "Hoi An", "Ho Chi Minh City"],
+      "tour_description": "Embark on an adventure through the captivating landscapes of Vietnam on this exhilarating tour. Cruise the emerald waters of Halong Bay, wander the ancient streets of Hoi An, and explore the bustling city of Ho Chi Minh City.",
+      "occurring_date": "2023-12-20",
+      "total_persons_attended": 55
+    }
+  ]
+  

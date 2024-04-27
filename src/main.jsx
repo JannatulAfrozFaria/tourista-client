@@ -13,6 +13,8 @@ import Register from './Components/Pages/Register.jsx';
 import Home from './Components/Pages/Home.jsx';
 import AuthProvider from './Components/Provider/AuthProvider.jsx';
 import AllTouristSpot from './Components/Pages/AllTouristSpot.jsx';
+import OurPackages from './Components/HomeSegments/OurPackages.jsx';
+import PreviousTours from './Components/HomeSegments/PreviousTours.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +30,16 @@ const router = createBrowserRouter([
         path: '/alltouristspot',
         element: <AllTouristSpot></AllTouristSpot>
       },
+      {
+        path: '/packages',
+        element: <OurPackages></OurPackages>,
+        loader: () => fetch('/TourPackagesData.json')
+      },
+      {
+        path: '/previoustours',
+        element: <PreviousTours></PreviousTours>
+      },
+      
       {
         path: '/login',
         element: <Login></Login>

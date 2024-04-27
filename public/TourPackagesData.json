@@ -3,6 +3,7 @@
       "id": 1,
       "image": "https://i.postimg.cc/d3dVj8Nw/thailand-tour.jpg",
       "package_name": "Luxury Tours",
+      "description": "Indulge in opulence and sophistication with our luxury tours. Experience lavish accommodations, gourmet dining, and exclusive experiences tailored to the discerning traveler.",
       "maximum_allowable_persons": 2,
       "cost_per_person": "$5000",
       "facilities": ["Luxury Accommodation", "Fine Dining Experiences", "Private Transportation", "Exclusive Tours"]
@@ -11,6 +12,7 @@
       "id": 2,
       "image": "https://i.postimg.cc/1RvpHf8R/ocuklu-aile-tatil-696x456.jpg",
       "package_name": "Family-Friendly Tours",
+      "description": "Create lasting memories with our family-friendly tours. Enjoy fun-filled activities, kid-friendly accommodations, and attractions suitable for all ages.",
       "maximum_allowable_persons": 4,
       "cost_per_person": "$1000",
       "facilities": ["Kid-Friendly Accommodation", "Family Activities", "Childcare Services", "Theme Park Tickets"]
@@ -19,6 +21,7 @@
       "id": 3,
       "image": "https://i.postimg.cc/3RV38XLJ/Walking-across-a-fallen-tree.jpg",
       "package_name": "Solo Traveler Tours",
+      "description": "Embark on an unforgettable adventure with our solo traveler tours. Connect with like-minded individuals and explore the world at your own pace.",
       "maximum_allowable_persons": 1,
       "cost_per_person": "$2000",
       "facilities": ["Single Accommodation", "Solo Traveler Community Events", "Guided Tours", "Solo Activities"]
@@ -27,6 +30,7 @@
       "id": 4,
       "image": "https://i.postimg.cc/jS14DTfN/underscored-cheap-honeymoon-packages-lead-couple-honeymoon-beach-maldives.jpg",
       "package_name": "Honeymoon Packages",
+      "description": "Celebrate love and romance with our honeymoon packages. Experience intimate moments, breathtaking scenery, and luxurious accommodations tailored for couples.",
       "maximum_allowable_persons": 2,
       "cost_per_person": "$6000",
       "facilities": ["Romantic Accommodation", "Private Dinners", "Couples Spa Treatments", "Sunset Cruises"]
@@ -35,6 +39,7 @@
       "id": 5,
       "image": " https://i.postimg.cc/0Nn0MMnR/b.jpg",
       "package_name": "Group Tours",
+      "description": "Share unforgettable experiences with our group tours. Enjoy camaraderie, shared adventures, and group discounts while exploring exciting destinations.",
       "maximum_allowable_persons": 10,
       "cost_per_person": "$800",
       "facilities": ["Group Accommodation", "Group Activities", "Guided Tours", "Shared Transportation"]
@@ -43,6 +48,7 @@
       "id": 6,
       "image": "https://i.postimg.cc/26hGptVW/Website-FEATURED-IMAGE-2-5-1160x785.jpg",
       "package_name": "Wildlife Safaris",
+      "description": "Embark on a thrilling wildlife adventure with our safari tours. Encounter majestic creatures, stunning landscapes, and immersive experiences in the heart of nature.",
       "maximum_allowable_persons": 6,
       "cost_per_person": "$1500",
       "facilities": ["Safari Lodge Accommodation", "Guided Safari Tours", "Wildlife Viewing", "Birdwatching Excursions"]
