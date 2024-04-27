@@ -15,6 +15,7 @@ import AuthProvider from './Components/Provider/AuthProvider.jsx';
 import AllTouristSpot from './Components/Pages/AllTouristSpot.jsx';
 import OurPackages from './Components/HomeSegments/OurPackages.jsx';
 import PreviousTours from './Components/HomeSegments/PreviousTours.jsx';
+import AddTouristSpot from './Components/Pages/AddTouristSpot.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,7 +40,10 @@ const router = createBrowserRouter([
         path: '/previoustours',
         element: <PreviousTours></PreviousTours>
       },
-      
+      {
+        path: '/addtouristspot',
+        element: <AddTouristSpot></AddTouristSpot>
+      },
       {
         path: '/login',
         element: <Login></Login>
