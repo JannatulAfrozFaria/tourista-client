@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { AuthContext } from '../context/AuthProvider';
-import profilePhoto from '../assets/profile.png';
+
+import profilePhoto from '../../assets/profile.png';
 import tippy from 'tippy.js';
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'; 
-import { auth } from '../firebase/firebase.config';
+import { auth } from '../FireBase/firebase.config';
+import { AuthContext } from '../Provider/AuthProvider';
+
 
 const Navbar = () => {
     const {user,logOut} = useContext(AuthContext);
@@ -18,13 +20,9 @@ const Navbar = () => {
     }
     const Links = <>
         <li> <NavLink to='/' >Home</NavLink> </li>
-        <li> <NavLink to='/gallery' >Gallery</NavLink> </li>
-        <li> <NavLink to='/profile' >Update Profile</NavLink> </li>
+        <li> <NavLink to='/login' >Login</NavLink> </li>
+        <li> <NavLink to='/register' >Register</NavLink> </li>
     </>
-
-    // tippy('.profile-pic', {
-    // content: 'My tooltip!',
-    // });
     
     return (
         <div  className="navbar bg-base-100 my-5">
