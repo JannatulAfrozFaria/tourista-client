@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.postimg.cc/d3dVj8Nw/thailand-tour.jpg",
+      "package_name": "Luxury Tours",
+      "maximum_allowable_persons": 2,
+      "cost_per_person": "$5000",
+      "facilities": ["Luxury Accommodation", "Fine Dining Experiences", "Private Transportation", "Exclusive Tours"]
+    },
+    {
+      "id": 2,
+      "image": "https://i.postimg.cc/1RvpHf8R/ocuklu-aile-tatil-696x456.jpg",
+      "package_name": "Family-Friendly Tours",
+      "maximum_allowable_persons": 4,
+      "cost_per_person": "$1000",
+      "facilities": ["Kid-Friendly Accommodation", "Family Activities", "Childcare Services", "Theme Park Tickets"]
+    },
+    {
+      "id": 3,
+      "image": "https://i.postimg.cc/3RV38XLJ/Walking-across-a-fallen-tree.jpg",
+      "package_name": "Solo Traveler Tours",
+      "maximum_allowable_persons": 1,
+      "cost_per_person": "$2000",
+      "facilities": ["Single Accommodation", "Solo Traveler Community Events", "Guided Tours", "Solo Activities"]
+    },
+    {
+      "id": 4,
+      "image": "https://i.postimg.cc/jS14DTfN/underscored-cheap-honeymoon-packages-lead-couple-honeymoon-beach-maldives.jpg",
+      "package_name": "Honeymoon Packages",
+      "maximum_allowable_persons": 2,
+      "cost_per_person": "$6000",
+      "facilities": ["Romantic Accommodation", "Private Dinners", "Couples Spa Treatments", "Sunset Cruises"]
+    },
+    {
+      "id": 5,
+      "image": " https://i.postimg.cc/0Nn0MMnR/b.jpg",
+      "package_name": "Group Tours",
+      "maximum_allowable_persons": 10,
+      "cost_per_person": "$800",
+      "facilities": ["Group Accommodation", "Group Activities", "Guided Tours", "Shared Transportation"]
+    },
+    {
+      "id": 6,
+      "image": "https://i.postimg.cc/26hGptVW/Website-FEATURED-IMAGE-2-5-1160x785.jpg",
+      "package_name": "Wildlife Safaris",
+      "maximum_allowable_persons": 6,
+      "cost_per_person": "$1500",
+      "facilities": ["Safari Lodge Accommodation", "Guided Safari Tours", "Wildlife Viewing", "Birdwatching Excursions"]
+    }
+  ]
+  
