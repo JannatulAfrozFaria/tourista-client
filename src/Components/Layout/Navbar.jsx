@@ -1,11 +1,70 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../context/AuthProvider';
+import profilePhoto from '../assets/profile.png';
+import tippy from 'tippy.js';
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css'; 
+import { auth } from '../firebase/firebase.config';
 
 const Navbar = () => {
+    const {user,logOut} = useContext(AuthContext);
+    console.log(user);
+
+    const handleSignOut = () =>{
+        logOut()
+        .then()
+        .catch(error=>console.error(error))
+    }
+    const Links = <>
+        <li> <NavLink to='/' >Home</NavLink> </li>
+        <li> <NavLink to='/gallery' >Gallery</NavLink> </li>
+        <li> <NavLink to='/profile' >Update Profile</NavLink> </li>
+    </>
+
+    // tippy('.profile-pic', {
+    // content: 'My tooltip!',
+    // });
+    
     return (
-        <div>
-            <h2>This is Navbar</h2>
+        <div  className="navbar bg-base-100 my-5">
+            <div className="navbar-start">
+                <div className="dropdown">
+                <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    {Links}
+                </ul>
+                </div>
+                <a className="btn btn-ghost text-xl theme-color">BluePrint Realty</a>
+            </div>
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1">
+                    {Links}
+                </ul>
+            </div>
+            <div className="navbar-end">
+                {
+                    user ? <div className='flex item-center gap-1'>
+                                <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
+                                    <Tippy content={auth.currentUser.displayName} >
+                                        <div className=" profile-pic w-10 rounded-full ">
+                                            <img src={profilePhoto} alt="" />
+                                        </div>
+                                    </Tippy>
+                                </label>
+                                <button onClick={handleSignOut}  className="btn theme-color">Log Out</button> 
+                            </div>
+                    
+                    : <Link to="/login" >
+                        <button className="btn theme-color">Login</button>
+                    </Link>
+                }
+            </div>
         </div>
     );
 };
+
 
 export default Navbar;
