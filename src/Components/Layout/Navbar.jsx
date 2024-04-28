@@ -38,9 +38,9 @@ const Navbar = () => {
     }
     const Links = <>
         <li> <NavLink to='/' >Home</NavLink> </li>
-        <li> <NavLink to='/alltouristspot' >All Tourist Spots</NavLink> </li>
-        <li> <NavLink to='/addtouristspot' >Add Tourist Spot</NavLink> </li>
-        <li> <NavLink to='/mylist' >My List</NavLink> </li>
+        <li> <NavLink to='/allTouristSpot' >All Tourist Spots</NavLink> </li>
+        <li> <NavLink to='/addTouristSpot' >Add Tourist Spot</NavLink> </li>
+        <li> <NavLink to='/myList' >My List</NavLink> </li>
         <li> <NavLink to='/register' >Register</NavLink> </li>
     </>
     

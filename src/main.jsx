@@ -16,6 +16,7 @@ import AllTouristSpot from './Components/Pages/AllTouristSpot.jsx';
 import OurPackages from './Components/HomeSegments/OurPackages.jsx';
 import PreviousTours from './Components/HomeSegments/PreviousTours.jsx';
 import AddTouristSpot from './Components/Pages/AddTouristSpot.jsx';
+import MyList from './Components/Pages/MyList.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,21 +29,25 @@ const router = createBrowserRouter([
         loader: () => fetch('/TourPackagesData.json')
       },
       {
-        path: '/alltouristspot',
-        element: <AllTouristSpot></AllTouristSpot>
-      },
-      {
         path: '/packages',
         element: <OurPackages></OurPackages>,
         loader: () => fetch('/TourPackagesData.json')
       },
       {
-        path: '/previoustours',
+        path: '/previousTours',
         element: <PreviousTours></PreviousTours>
       },
       {
-        path: '/addtouristspot',
+        path: '/allTouristSpot',
+        element: <AllTouristSpot></AllTouristSpot>
+      },
+      {
+        path: '/addTouristSpot',
         element: <AddTouristSpot></AddTouristSpot>
+      },
+      {
+        path: '/myList',
+        element: <MyList></MyList>
       },
       {
         path: '/login',

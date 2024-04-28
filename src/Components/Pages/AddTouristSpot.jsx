@@ -1,6 +1,36 @@
 import React from 'react';
 
 const AddTouristSpot = () => {
+    const handleAdd = (event) =>{
+        event.preventDefault();
+        const form = event.target;
+        const photo = form.photo.value;
+        const spot = form.spot.value;
+        const description = form.description.value;
+        const country = form.country.value;
+        const location = form.location.value;
+        const cost = form.cost.value;
+        const seasonality = form.seasonality.value;
+        const time = form.time.value;
+        const visitors = form.visitors.value;
+        const username = form.username.value;
+        const email = form.email.value;
+        const newSpot = {photo, spot, description,country,location,cost,seasonality,time,visitors,username,email}
+        console.log(newSpot);
+
+        //send data to the server 
+        fetch('http://localhost:5000/spot',{
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(newSpot)
+        })
+        .then(res=> res.json())
+        .then(data=>{
+            console.log(data);
+        })
+    }
     return (
         <div>
             <div className="hero bg-base-200 border rounded-3xl">
@@ -11,7 +41,7 @@ const AddTouristSpot = () => {
                     </div>
                     {/* INPUT-----FORM */}
                     <div className="card  w-full shadow-2xl bg-base-100">
-                    <form className="card-body w-full">
+                    <form onSubmit={handleAdd} className="card-body w-full">
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                             <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
                                 {/* PHOTO */}
@@ -28,7 +58,7 @@ const AddTouristSpot = () => {
                                     <span className="label-text">Spot Name</span>
                                 </label>
                                 <input type="text" placeholder="Spot Name"
-                                name="name" className="input input-bordered" required />
+                                name="spot" className="input input-bordered" required />
                                 </div>
                                 {/*SHORT------DESCRIPTION*/}
                                 <div className="form-control col-span-1 md:col-span-2 ">
@@ -73,7 +103,7 @@ const AddTouristSpot = () => {
                                     <span className="label-text">Best Season to Visit</span>
                                 </label>
                                 <input type="text" placeholder="Seasonality"
-                                name="season" className="input input-bordered" required />
+                                name="seasonality" className="input input-bordered" required />
                                 </div>
                                 {/* TRAVEL-----TIME */}
                                 <div className="form-control">
@@ -123,7 +153,8 @@ const AddTouristSpot = () => {
 
 
                         <div className="form-control mt-6">
-                        <button className="btn basic-btn">Add</button>
+                            {/* <button className="btn basic-btn">Add</button> */}
+                            <input type="submit" value="Add" className="btn basic-btn" />
                         </div>
                     </form>
                     </div>

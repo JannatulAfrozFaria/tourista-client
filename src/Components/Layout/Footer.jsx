@@ -11,7 +11,7 @@ const Footer = () => {
                     <Link to='/packages' >Packages</Link>
                 </p>
                 <p className="link link-hover">
-                    <Link to='/previoustours' >Previous Tours</Link>
+                    <Link to='/previousTours' >Previous Tours</Link>
                 </p>
             </nav> 
             <h2>Contact us: tourista@gmail.com</h2>
