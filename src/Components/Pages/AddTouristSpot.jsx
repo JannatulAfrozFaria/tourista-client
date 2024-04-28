@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const AddTouristSpot = () => {
     const handleAdd = (event) =>{
@@ -19,7 +20,7 @@ const AddTouristSpot = () => {
         console.log(newSpot);
 
         //send data to the server 
-        fetch('http://localhost:5000/spot',{
+        fetch('http://localhost:5500/spot',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -29,6 +30,14 @@ const AddTouristSpot = () => {
         .then(res=> res.json())
         .then(data=>{
             console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success',
+                    text: 'New Spot Added Successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
         })
     }
     return (
