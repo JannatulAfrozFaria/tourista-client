@@ -17,6 +17,9 @@ import OurPackages from './Components/HomeSegments/OurPackages.jsx';
 import PreviousTours from './Components/HomeSegments/PreviousTours.jsx';
 import AddTouristSpot from './Components/Pages/AddTouristSpot.jsx';
 import MyList from './Components/Pages/MyList.jsx';
+import SpotDetails from './dbFetchedCards/SpotDetails.jsx';
+import PrivateRoute from './Components/Pages/PrivateRoute.jsx';
+import UpdateSpot from './dbFetchedCards/UpdateSpot.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,12 +46,25 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5500/spot')
       },
       {
+        path: '/spot/:id',
+        element: <SpotDetails></SpotDetails> ,
+       loader: ({params}) => fetch(`http://localhost:5500/spot/${params.id}`)
+      },
+      {
         path: '/addTouristSpot',
         element: <AddTouristSpot></AddTouristSpot>
       },
       {
         path: '/myList',
-        element: <MyList></MyList>
+        element: <PrivateRoute>
+                    <MyList></MyList>
+                </PrivateRoute>,
+        loader: () => fetch('http://localhost:5500/spot')         
+      },
+      {
+        path: 'updateSpot/:id',
+        element: <UpdateSpot></UpdateSpot>,
+        loader: ({params}) => fetch(`http://localhost:5500/spot/${params.id}`)
       },
       {
         path: '/login',

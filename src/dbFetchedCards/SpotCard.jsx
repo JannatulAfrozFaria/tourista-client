@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SpotCard = ({sp}) => {
-    const {photo, spot, description,country,location,cost,seasonality,time,visitors,username,email} = sp;
+    const { _id,photo, spot, description,country,location,cost,seasonality,time,visitors,username,email} = sp;
     return (
         <div className="card-side bg-base-100 shadow-xl">
             <figure><img src={photo} alt="Album"/></figure>
@@ -19,7 +20,10 @@ const SpotCard = ({sp}) => {
 
                 {/* BUTTON-------- */}
                 <div className="card-actions justify-start">
-                <button className="btn basic-btn">View Details</button>
+                    {/* <Link to={`spot/${_id}`}  className='btn basic-btn'>View Details</Link> */}
+                    <Link className='btn basic-btn'>
+                        View Details
+                    </Link>
                 </div>
             </div>
         </div>

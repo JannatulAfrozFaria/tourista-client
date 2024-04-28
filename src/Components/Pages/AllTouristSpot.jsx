@@ -1,23 +1,37 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import SpotCard from '../../dbFetchedCards/SpotCard';
 import { IoIosArrowDown } from "react-icons/io";
 
 const AllTouristSpot = () => {
-    const spots = useLoaderData();
+
     useEffect(()=>{
         document.title = "Tourista | All Tourist Spots"
     },[])
+
+    const spots = useLoaderData();
+    const [spotList,setSpotList] = useState([]);
+
+    console.log(spots);
+   
+    const handleCostSorting = () =>{
+        const sortByAverageCost = spotList.sort((a,b)=>{
+            return parseInt(b.cost.slice(1)) - parseInt(a.cost.slice(1))
+        })
+        setSpotList([...sortByAverageCost]);
+        console.log(sortByAverageCost);
+    }
+    
     return (
         <div>
-            <h3 className="text-3xl">Explore All Spots added by Users</h3>
-            <h2 className="text-xl">Spots: {spots.length} </h2>
+            <h3 className="text-3xl mt-12">Explore All Spots added by Users</h3>
+            <h2 className="text-xl text-gray-500 mt-4 mb-8">There are about {spots.length} Spots listed till Now! You can add your personal favourite too! </h2>
             {/* SORT BUTTON------ */}
             <div>
                 <div className="dropdown dropdown-bottom dropdown-end">
                 <div tabIndex={0} role="button" className="btn m-1">Sort  <IoIosArrowDown /> </div>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a>Average Cost</a></li>
+                    <li onClick={handleCostSorting} ><a>Average Cost</a></li>
                 </ul>
                 </div>
             </div>
