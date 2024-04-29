@@ -64,3 +64,7 @@ For support, email archetypedesigners@gmail.com or join our Slack channel.
   - [Fire Base](https://console.firebase.google.com/)
 
 
+## nom package used for challenge task
+
+ - [React Awesome reveal](https://www.npmjs.com/package/react-awesome-reveal)
+  - [Lottie React](https://www.npmjs.com/package/lottie-react)

@@ -44,12 +44,12 @@ const AddTouristSpot = () => {
         <div>
             <div className="hero bg-base-200 border rounded-3xl">
                 <div className="hero-content flex-col  gap-2">
-                    <div className="text-center w-full mt-4">
+                    <div data-aos="fade-left" data-aos-duration="2000" className="text-center w-full mt-4">
                         <h1 className="text-3xl font-bold">Add A Tourist Spot!</h1>
                         <p className="py-6 ">You can add your favourite tourist destination here and save for later!</p>
                     </div>
                     {/* INPUT-----FORM */}
-                    <div className="card  w-full shadow-2xl bg-base-100">
+                    <div data-aos="fade-up" data-aos-duration="3000" className="card  w-full shadow-2xl bg-base-100">
                     <form onSubmit={handleAdd} className="card-body w-full">
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                             <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>

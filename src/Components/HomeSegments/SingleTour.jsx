@@ -5,10 +5,10 @@ const SingleTour = ({tour}) => {
     return (
         <div className="hero bg-base-200 border rounded-3xl p-4">
             <div className="hero-content flex-col lg:flex-row gap-8">
-                <div className='w-1/2 h-3/4'>
+                <div className='w-full md:w-1/2 h-3/4'>
                     <img className=' border rounded-3xl h-full' src={image} />
                 </div>
-                <div className='w-1/2'>
+                <div className='w-full md:w-1/2'>
                     <h1 className="text-3xl font-bold text-left mb-2"> {country_name} Tour </h1>
                     <div className='text-left text-gray-500'>
                             <p > 

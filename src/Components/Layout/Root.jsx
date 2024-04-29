@@ -5,12 +5,12 @@ import Footer from './Footer';
 
 const Root = () => {
     return (
-        <div>
-            <div className="mx-auto font-poppins">
+        <div className='font-poppins'>
+            <div className="mx-auto ">
                 <Navbar></Navbar>
                 <Outlet></Outlet>
             </div>
-            <Footer className='w-full' ></Footer>
+            <Footer ></Footer>
         </div>
     );
 };

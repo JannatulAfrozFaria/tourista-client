@@ -4,6 +4,8 @@ import CountriesSection from '../HomeSegments/CountriesSection';
 import TouristSpots from '../HomeSegments/TouristSpots';
 import OurPackages from '../HomeSegments/OurPackages';
 import PreviousTours from '../HomeSegments/PreviousTours';
+import { Fade } from "react-awesome-reveal";
+import Lottie from "lottie-react";
 
 const Home = () => {
   useEffect(()=>{
@@ -11,7 +13,9 @@ const Home = () => {
     },[])
     return (
         <div>
-            <Banner></Banner>
+            <Fade >
+                <Banner></Banner>
+            </Fade>
             <TouristSpots></TouristSpots>
             <CountriesSection></CountriesSection>
             <OurPackages></OurPackages>
