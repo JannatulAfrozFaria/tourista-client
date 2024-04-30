@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaEye,FaEyeSlash} from "react-icons/fa";
 import { updateProfile } from 'firebase/auth';
 import {auth} from '../FireBase/firebase.config';
+import Swal from 'sweetalert2';
 const Register = () => {
     //Dynamic Title
     useEffect(()=>{
@@ -54,8 +55,14 @@ const Register = () => {
         .then(result=>{
             console.log(result.user)
             setSuccess('User Created Successfully!')
-            toast('Registration Successful!')
-            alert('Successfully Registered!')
+            // toast('Registration Successful!')
+            // alert('Successfully Registered!')
+            Swal.fire({
+                title: 'Success',
+                text: 'Successfully Registered!',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
             updateProfile(auth.currentUser, { displayName: name }).catch(
                 (err) => console.log(err)
               );
@@ -68,9 +75,9 @@ const Register = () => {
     return (
         <div className='mx-10 md:mx-auto lg:mx-auto'>
             <div>
-                <h2 className="text-3xl text-center my-10 theme-color animate__animated animate__fadeInDown animate__animated animate__bounce animate__delay-1s ">Please Register</h2>
+                <h2 data-aos="fade-right" data-aos-duration="2000" className="text-3xl text-center my-10 theme-color animate__animated animate__fadeInDown animate__animated animate__bounce animate__delay-1s ">Please Register</h2>
             </div>
-                 <form  onSubmit={handleRegister} className='md:w-3/4 lg:w-1/2 mx-auto animate__animated animate__fadeInRight animate__animated animate__bounce animate__delay-1s '>
+                 <form data-aos="fade-up" data-aos-duration="3000"  onSubmit={handleRegister} className='md:w-3/4 lg:w-1/2 mx-auto animate__animated animate__fadeInRight animate__animated animate__bounce animate__delay-1s '>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>

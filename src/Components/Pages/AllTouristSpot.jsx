@@ -3,6 +3,9 @@ import { useLoaderData } from 'react-router-dom';
 import SpotCard from '../../dbFetchedCards/SpotCard';
 import { IoIosArrowDown } from "react-icons/io";
 import { Fade ,Slide } from "react-awesome-reveal";
+import Lottie from "lottie-react";
+import Tourism from "/public/Tourism.json";
+
 const AllTouristSpot = () => {
 
     useEffect(()=>{
@@ -24,6 +27,9 @@ const AllTouristSpot = () => {
     
     return (
         <div>
+            <div  className='w-1/3 mx-auto' >
+                    <Lottie className='w-2/3 mx-auto' animationData={Tourism} />
+            </div>
             <Fade >
                 <h3 className="text-3xl mt-12">Explore All Spots added by Users</h3>
                 <h2 className="text-xl text-gray-500 mt-4 mb-8">There are about {spots.length} Spots listed till Now! You can add your personal favourite too! </h2>

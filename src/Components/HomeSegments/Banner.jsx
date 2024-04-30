@@ -1,7 +1,10 @@
 import React from 'react';
 import { Slide } from "react-awesome-reveal";
 import Lottie from "lottie-react";
-import Travel from "../../../public/Travel.json"
+import Travel from "/public/Travel.json";
+import Passport from "/public/Passport.json";
+import MapLocation from "/public/MapLocation.json";
+
 
 const Banner = () => {
     return (
@@ -36,7 +39,7 @@ const Banner = () => {
                                 <div className="hero-content text-center text-neutral-content">
                                     <div className="max-w-lg">
                                         <div  className='w-1/3 mx-auto' >
-                                            <Lottie className='' animationData={Travel} />
+                                            <Lottie className='' animationData={Passport} />
                                         </div>
                                        <Slide direction={'right'}>
                                             <h1 className="mb-5 text-5xl font-bold">Angkor Wat</h1>
@@ -58,7 +61,7 @@ const Banner = () => {
                                 <div className="hero-content text-center text-neutral-content">
                                     <div className="max-w-lg">
                                         <div  className='w-1/3 mx-auto' >
-                                            <Lottie className='' animationData={Travel} />
+                                            <Lottie className='' animationData={MapLocation} />
                                         </div>
                                         <Slide>
                                             <h1 className="mb-5 text-5xl font-bold">Halong Bay</h1>

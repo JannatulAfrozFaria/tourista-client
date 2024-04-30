@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLoaderData } from 'react-router-dom';
 
 import profilePhoto from '../../assets/profile.png';
 import tippy from 'tippy.js';
@@ -12,6 +12,10 @@ import { AuthContext } from '../Provider/AuthProvider';
 const Navbar = () => {
     //state for changing theme
     const [theme,setTheme]= useState('light');
+
+    //for updateSpots
+    // const loadedSpots = useLoaderData();
+    // const[spots,setSpots] = useState(loadedSpots);
 
     const {user,logOut} = useContext(AuthContext);
     console.log(user);

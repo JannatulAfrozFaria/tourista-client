@@ -4,6 +4,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { FaGoogle, FaGithub  } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     useEffect(()=>{
@@ -37,13 +38,23 @@ const Login = () => {
                 {console.log(result.user)
                     navigate(location.state? location.state : '/')
                     setSuccess('User Created Successfully!')
-                    toast('Registration Successful!')
-                    alert('Logged in Successfully!')
+                    // alert('Logged in Successfully!')
+                   Swal.fire({
+                        title: 'Success',
+                        text: 'Logged in Successfully!',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                      })
                 })
             .catch(error=>{
                 console.error(error)
                 setLoginError(error.message)
-                alert('Please input a valid email and password ')
+                // alert('Please input a valid email and password ')
+                Swal.fire({
+                    text: 'Please input a valid email and password',
+                    icon: 'warning',
+                    confirmButtonText: 'Close'
+                  })
             })
     }
 
@@ -70,9 +81,9 @@ const Login = () => {
     return (
         <div className='mx-10 md:mx-auto lg:mx-auto'>
             <div>
-                <h2 className="text-3xl text-center my-10 theme-color animate__animated animate__fadeInLeft animate__animated animate__backInUp animate__delay-1s">Please Login</h2>
+                <h2 data-aos="fade-left" data-aos-duration="2000" className="text-3xl text-center my-10 theme-color animate__animated animate__fadeInLeft animate__animated animate__backInUp animate__delay-1s">Please Login</h2>
             </div>
-                 <form  onSubmit={handleLogin} className='sm:w-1/2 md:w-3/4 lg:w-1/2 mx-auto  animate__animated animate__fadeInRight animate__animated animate__bounce animate__delay-1s'>
+                 <form  data-aos="fade-up" data-aos-duration="3000" onSubmit={handleLogin} className='sm:w-1/2 md:w-3/4 lg:w-1/2 mx-auto  animate__animated animate__fadeInRight animate__animated animate__bounce animate__delay-1s'>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
