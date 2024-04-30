@@ -11,11 +11,11 @@ const SpotDetails = () => {
             <div className='text-center my-5 mx-auto w-full animate__animated animate__fadeInUp animate__animated animate__bounce animate__delay-2s'>
                 <img  className=' w-3/4 mx-auto rounded-3xl ' src={photo} alt="" />
             </div>
-            <div data-aos="fade-left" data-aos-duration="3000" className=' text-gray-500 w-3/4 mx-auto text-xl text-center'>
+            <div data-aos="fade-left" data-aos-duration="3000" className=' text-gray-500 w-full md:w-3/4 mx-auto text-base md:text-xl text-center'>
                 <h2 className='font-semibold'>Description: </h2>
                 <p className='w-3/4 mx-auto'>{description} </p>
                 <div className='my-4'>
-                    <p > <span className='font-semibold'>Average Cost:</span> {cost} </p>
+                    <p className='theme-light font-medium'> <span className='font-semibold'>Average Cost:</span> {cost} </p>
                     <p className='theme-light font-medium' > <span className='font-semibold text-gray-500'>Seasonality :</span> {seasonality} </p>
                     <p className='theme-light font-medium' > <span className='font-semibold text-gray-500'>Travel Time : </span> {time} </p>
                     {/* <p className='theme-light font-medium'> <span className='font-semibold text-gray-500'>Total Visitors Per Year:</span> {visitors} </p> */}

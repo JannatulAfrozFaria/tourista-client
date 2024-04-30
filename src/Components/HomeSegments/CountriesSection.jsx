@@ -24,8 +24,8 @@ const CountriesSection = () => {
                         <div className='w-full md:w-1/3'>
                             <figure  className=''><img className='rounded-xlj' src={country.photo} /></figure>
                         </div>
-                        <div className="text-left ml-6 w-full md:w-2/3 ">
-                            <h2 className="card-title theme-color text-3xl">{country.country} </h2>
+                        <div className="text-left ml-1 lg:ml-6 w-full md:w-2/3 ">
+                            <h2 className="card-title theme-color mt-4 md:mt-0 text-3xl">{country.country} </h2>
                             <p className='my-6'> {country.description} </p>
                             <div className="card-actions justify-start my-3">
                             <button className="btn basic-btn">View Details</button>
