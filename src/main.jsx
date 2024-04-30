@@ -60,7 +60,9 @@ const router = createBrowserRouter([
       },
       {
         path: 'spot/:id',
-        element: <SpotDetails></SpotDetails> ,
+        element: <PrivateRoute>
+                      <SpotDetails></SpotDetails>
+                </PrivateRoute> ,
        loader: ({params}) => fetch(`https://tourista-server.vercel.app/spot/${params.id}`)
       },
       {
