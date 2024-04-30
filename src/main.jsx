@@ -19,25 +19,20 @@ import AddTouristSpot from './Components/Pages/AddTouristSpot.jsx';
 import MyList from './Components/Pages/MyList.jsx';
 import SpotDetails from './dbFetchedCards/SpotDetails.jsx';
 import PrivateRoute from './Components/Pages/PrivateRoute.jsx';
-// import UpdateSpot from './dbFetchedCards/UpdateSpot.jsx';
+import UpdateSpot from './dbFetchedCards/UpdateSpot.jsx';
+import TouristSpotDetails from './Components/HomeSegments/TouristSpotDetails.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-import TouristSpotDetails from './Components/HomeSegments/TouristSpotDetails.jsx';
-// import Navbar from './Components/Layout/Navbar.jsx';
-import UpdateInfo from './Components/Pages/UpdateInfo.jsx';
 // ..
 AOS.init();
+
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root> ,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-      // {
-      //   path: '/',
-      //   element: <Navbar></Navbar>,
-      //   // loader: () =>fetch('')
-      // },
       {
         path: '/',
         element: <Home></Home>,
@@ -46,8 +41,8 @@ const router = createBrowserRouter([
       {
         path: 'touristSpotDetails/:id',
         element: <TouristSpotDetails></TouristSpotDetails>,
-        // loader: ({params}) => fetch(`https://tourista-server.vercel.app/countries/${params._id}`)
-        loader: ()=>fetch('https://tourista-server.vercel.app/countries/')
+        loader: ({params}) => fetch(`https://tourista-server.vercel.app/countries/${params.id}`)
+        // loader: ()=>fetch('https://tourista-server.vercel.app/countries/')
       },
       {
         path: '/packages',
@@ -64,7 +59,7 @@ const router = createBrowserRouter([
         loader: () => fetch('https://tourista-server.vercel.app/spot')
       },
       {
-        path: '/spot/:id',
+        path: 'spot/:id',
         element: <SpotDetails></SpotDetails> ,
        loader: ({params}) => fetch(`https://tourista-server.vercel.app/spot/${params.id}`)
       },
@@ -76,13 +71,12 @@ const router = createBrowserRouter([
         path: '/myList',
         element: <PrivateRoute>
                     <MyList></MyList>
-                </PrivateRoute>,
-        loader: () => fetch('https://tourista-server.vercel.app/spot')         
+                </PrivateRoute>
+        // loader: () => fetch('https://tourista-server.vercel.app/spot')         
       },
       {
         path: 'updateSpot/:id',
-        // element: <UpdateSpot></UpdateSpot>,
-        element: <UpdateInfo></UpdateInfo>,
+        element: <UpdateSpot></UpdateSpot>,
         loader: ({params}) => fetch(`https://tourista-server.vercel.app/spot/${params.id}`)
       },
       {

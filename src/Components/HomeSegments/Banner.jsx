@@ -1,9 +1,9 @@
 import React from 'react';
 import { Slide } from "react-awesome-reveal";
 import Lottie from "lottie-react";
-import Travel from "/public/Travel.json";
-import Passport from "/public/Passport.json";
-import MapLocation from "/public/MapLocation.json";
+import Travel from "/src/Travel.json";
+import Passport from "/src/Passport.json";
+import MapLocation from "/src/MapLocation.json";
 
 
 const Banner = () => {

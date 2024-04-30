@@ -4,7 +4,7 @@ import SpotCard from '../../dbFetchedCards/SpotCard';
 import { IoIosArrowDown } from "react-icons/io";
 import { Fade ,Slide } from "react-awesome-reveal";
 import Lottie from "lottie-react";
-import Tourism from "/public/Tourism.json";
+import Tourism from "/src/Tourism.json";
 
 const AllTouristSpot = () => {
 

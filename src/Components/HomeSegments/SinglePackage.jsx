@@ -20,11 +20,11 @@ const SinglePackage = ({pack}) => {
                             <p className='theme-light font-medium' > <span className='font-semibold text-gray-500'>Maximum  Allowable Persons:</span> {maximum_allowable_persons} </p>
                         </div>
                         
-                        <p > <span className='font-semibold'>Facilities:</span> 
+                        <div > <span className='font-semibold'>Facilities:</span> 
                             {
                             facilities.map(facility=><li key={facility.id}>{facility} </li>)
                             }
-                        </p>
+                        </div>
                     </div>
                     {/* <div className="card-actions my-2">
                             <Link to={`/estate/${id}`}  className='btn basic-btn'>View Property</Link>

@@ -1,51 +1,63 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { Fade ,Slide,JackInTheBox } from "react-awesome-reveal";
-// import MyCard from '../../dbFetchedCards/MyCard';
 import Lottie from "lottie-react";
-import SoloTrip from "/public/SoloTrip.json";
-import MyListedSpot from './MyListedSpot';
+import SoloTrip from "/src/SoloTrip.json";
+import { AuthContext } from '../Provider/AuthProvider';
 
 const MyList = () => {
     useEffect(()=>{
         document.title = "Tourista | My List"
     },[])
-    const loadedSpots = useLoaderData();
-    console.log(loadedSpots);
-    const [spots,setSpots] = useState(loadedSpots);
 
-    // const handleDelete = (_id) =>{
-    //     console.log(_id)
-    //     Swal.fire({
-    //         title: "Are you sure?",
-    //         text: "You won't be able to revert this!",
-    //         icon: "warning",
-    //         showCancelButton: true,
-    //         confirmButtonColor: "#3085d6",
-    //         cancelButtonColor: "#d33",
-    //         confirmButtonText: "Yes, delete it!"
-    //       }).then((result) => {
-    //         if (result.isConfirmed) {
-    //             fetch(`https://tourista-server.vercel.app/spot/${_id}`,{
-    //                 method: 'DELETE'
-    //             })
-    //             .then(res=>res.json())
-    //             .then(data=>{
-    //                 console.log(data);
-    //                 if(data.deletedCount>0){
-    //                     Swal.fire({
-    //                         title: "Deleted!",
-    //                         text: "Your Selected Spot has been deleted.",
-    //                         icon: "success"
-    //                       });
-    //                       const remainingSpots = spots.filter( spn=> spn._id !== _id);
-    //                       setSpots(remainingSpots);
-    //                 }
-    //             })
-    //         }
-    //       });
-    // }
+    const {user} = useContext(AuthContext);
+
+    const [spots,setSpots] = useState([]);
+
+    useEffect(()=>{
+        fetch(`http://localhost:5500/myList/${user?.email}`)
+        .then (res=>res.json())
+        .then(data=>{
+            setSpots(data);
+        })
+    },[user])
+
+
+    // const loadedSpots = useLoaderData();
+    // const [spots,setSpots] = useState(loadedSpots);
+
+    const handleDelete = (_id) =>{
+        console.log(_id)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`https://tourista-server.vercel.app/spot/${_id}`,{
+                    method: 'DELETE'
+                })
+                .then(res=>res.json())
+                .then(data=>{
+                    console.log(data);
+                    if(data.deletedCount>0){
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your Selected Spot has been deleted.",
+                            icon: "success"
+                          });
+                          const remainingSpots = spots.filter( spn=> spn._id !== _id);
+                          setSpots(remainingSpots);
+                    }
+                })
+            }
+          });
+    }
 
 
     return (
@@ -60,7 +72,7 @@ const MyList = () => {
             {/* the LIST OF ALL SPOTS */}
             <div data-aos="fade-up" data-aos-duration="3000" >
                 <table className="table">
-                        {/* <thead className='mx-0 text-left'>
+                        <thead className='mx-0 text-center'>
                         <tr>
                             <th>
                             </th>
@@ -73,30 +85,8 @@ const MyList = () => {
                             <th></th>
                             <th></th>
                         </tr>
-                        </thead> */}
-                        <div className='flex gap-12  font-bold text-gray-400 w-2/3'>
-                            <div className='flex justify-start  gap-20 md:gap-0 md:justify-between w-full md:w-1/2'>
-                                <p className='ml-20'>Spot Name</p>
-                                <p>Country</p>
-                            </div>
-                            <div className='hidden md:flex flex-row gap-8 w-0 md:w-1/2'>
-                                <p>Average Cost</p>
-                                <p >Visions Per Year</p>
-                            </div>
-                        </div>
-                        <hr className='w-2/3 mt-4 ml-4' />
-                        
-                        <div>
-                            {
-                                spots.map(listed => <MyListedSpot
-                                key={listed._id}
-                                listed = {listed}
-                                spots = {spots}
-                                setSpots = {setSpots}
-                                ></MyListedSpot> )
-                            }
-                        </div>
-                        {/* <tbody>
+                        </thead>
+                        <tbody>
                             {
                                 spots.map(sp=>  <tr key={sp._id}>
                                     <th>
@@ -126,7 +116,7 @@ const MyList = () => {
                                         <h2>{sp.visitors}</h2>
                                      </td>
                                     <th>
-                                        <Link to={`updateSpot/${sp._id}`}>
+                                        <Link to={`/updateSpot/${sp._id}`}>
                                                 <button className="btn basic-btn btn-sm">Update</button>
                                         </Link>
                                     </th>
@@ -135,7 +125,7 @@ const MyList = () => {
                                     </th>
                                 </tr> )
                             }
-                        </tbody> */}
+                        </tbody>
                     </table>
                 
             </div>

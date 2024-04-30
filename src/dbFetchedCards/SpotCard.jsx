@@ -20,10 +20,10 @@ const SpotCard = ({sp}) => {
 
                 {/* BUTTON-------- */}
                 <div className="card-actions justify-start">
-                    {/* <Link to={`spot/${_id}`}  className='btn basic-btn'>View Details</Link> */}
-                    <Link className='btn basic-btn'>
+                    <Link to={`/spot/${_id}`}  className='btn basic-btn'>View Details</Link>
+                    {/* <Link className='btn basic-btn'>
                         View Details
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </div>

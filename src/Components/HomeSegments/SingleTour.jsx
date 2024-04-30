@@ -11,14 +11,14 @@ const SingleTour = ({tour}) => {
                 <div className='w-full md:w-1/2'>
                     <h1 className="text-3xl font-bold text-left mb-2"> {country_name} Tour </h1>
                     <div className='text-left text-gray-500'>
-                            <p > 
+                            <div > 
                                 <span className='font-semibold'>Destinations Visited :</span> 
                                 <div className='grid grid-cols-1 md:grid-cols-3 w-2/3 theme-light'>
                                         {
-                                            destinations_visited.map(desti=><p key={desti.id}>{desti} </p>)
+                                            destinations_visited.map(desti=><li key={desti.id}>{desti} </li>)
                                         }
                                 </div>
-                            </p>
+                            </div>
                             <h2 className='font-semibold mt-4'>Description: </h2>
                             <p>{tour_description} </p>
                             <div className='grid grid-rows-1 gap-1 my-4'>
