@@ -67,7 +67,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/addTouristSpot',
-        element: <AddTouristSpot></AddTouristSpot>
+        element: <PrivateRoute>
+                      <AddTouristSpot></AddTouristSpot>
+                </PrivateRoute>
       },
       {
         path: '/myList',
