@@ -41,13 +41,13 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('tourista-server.vercel.app/spot')
+        loader: () => fetch('https://tourista-server.vercel.app/spot')
       },
       {
         path: 'touristSpotDetails/:id',
         element: <TouristSpotDetails></TouristSpotDetails>,
-        // loader: ({params}) => fetch(`tourista-server.vercel.app/countries/${params._id}`)
-        loader: ()=>fetch('tourista-server.vercel.app/countries/')
+        // loader: ({params}) => fetch(`https://tourista-server.vercel.app/countries/${params._id}`)
+        loader: ()=>fetch('https://tourista-server.vercel.app/countries/')
       },
       {
         path: '/packages',
@@ -61,12 +61,12 @@ const router = createBrowserRouter([
       {
         path: '/allTouristSpot',
         element: <AllTouristSpot></AllTouristSpot>,
-        loader: () => fetch('tourista-server.vercel.app/spot')
+        loader: () => fetch('https://tourista-server.vercel.app/spot')
       },
       {
         path: '/spot/:id',
         element: <SpotDetails></SpotDetails> ,
-       loader: ({params}) => fetch(`tourista-server.vercel.app/spot/${params.id}`)
+       loader: ({params}) => fetch(`https://tourista-server.vercel.app/spot/${params.id}`)
       },
       {
         path: '/addTouristSpot',
@@ -77,13 +77,13 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
                     <MyList></MyList>
                 </PrivateRoute>,
-        loader: () => fetch('tourista-server.vercel.app/spot')         
+        loader: () => fetch('https://tourista-server.vercel.app/spot')         
       },
       {
         path: 'updateSpot/:id',
         // element: <UpdateSpot></UpdateSpot>,
         element: <UpdateInfo></UpdateInfo>,
-        loader: ({params}) => fetch(`tourista-server.vercel.app/spot/${params.id}`)
+        loader: ({params}) => fetch(`https://tourista-server.vercel.app/spot/${params.id}`)
       },
       {
         path: '/login',

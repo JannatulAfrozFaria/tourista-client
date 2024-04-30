@@ -18,7 +18,7 @@ const MyCard = ({sp, spots, setSpots}) => {
     //         confirmButtonText: "Yes, delete it!"
     //       }).then((result) => {
     //         if (result.isConfirmed) {
-    //             fetch(`tourista-server.vercel.app/spot/${_id}`,{
+    //             fetch(`https://tourista-server.vercel.app/spot/${_id}`,{
     //                 method: 'DELETE'
     //             })
     //             .then(res=>res.json())

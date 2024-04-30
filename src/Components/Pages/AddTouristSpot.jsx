@@ -22,7 +22,7 @@ const AddTouristSpot = () => {
         console.log(newSpot);
 
         //send data to the server 
-        fetch('tourista-server.vercel.app/spot',{
+        fetch('https://tourista-server.vercel.app/spot',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

@@ -22,7 +22,7 @@ const UpdateInfo = () => {
         console.log(updatedSpot);
 
         //send data to the server 
-        fetch(`tourista-server.vercel.app/spot/${_id}`,{
+        fetch(`https://tourista-server.vercel.app/spot/${_id}`,{
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'

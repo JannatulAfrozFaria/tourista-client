@@ -6,7 +6,7 @@ const TouristSpots = () => {
     const [touristSpots,setTouristSpots] = useState(null);
 
     useEffect(()=>{
-        fetch('tourista-server.vercel.app/countries')
+        fetch('https://tourista-server.vercel.app/countries')
         .then(res=>{
             return res.json();
         })

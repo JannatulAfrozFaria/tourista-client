@@ -4,7 +4,7 @@ const CountriesSection = () => {
     const [countries,setCountries] = useState(null);
 
     useEffect(()=>{
-        fetch('tourista-server.vercel.app/countries2/')
+        fetch('https://tourista-server.vercel.app/countries2/')
         .then(res=>{
             return res.json();
         })
