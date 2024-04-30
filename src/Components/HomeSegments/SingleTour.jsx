@@ -13,9 +13,9 @@ const SingleTour = ({tour}) => {
                     <div className='text-left text-gray-500'>
                             <div > 
                                 <span className='font-semibold'>Destinations Visited :</span> 
-                                <div className='grid grid-cols-1 md:grid-cols-3 w-2/3 theme-light'>
+                                <div className='grid grid-cols-1  w-2/3 theme-light'>
                                         {
-                                            destinations_visited.map(desti=><li key={desti.id}>{desti} </li>)
+                                            destinations_visited.map(desti=><span key={desti.id}>{desti} </span>)
                                         }
                                 </div>
                             </div>

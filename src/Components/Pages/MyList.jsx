@@ -66,15 +66,20 @@ const MyList = () => {
                     <Lottie className='w-2/3 mx-auto' animationData={SoloTrip} />
             </div>
             <Slide direction='left'>
-                <h3 className="text-3xl mt-12">Watch Spots added by You!</h3>
-                <h2 className="text-xl text-gray-500 mt-4 mb-8">There are about {spots.length} Spots listed till Now. You can add more! </h2>
+                <div className='mx-auto w-4/5 text-center'>
+                    <h3 className="text-2xl md:text-3xl mt-12 ">Watch Spots added by You!</h3>
+                    <h2 className="text-base md:text-xl text-gray-500 mt-4 mb-8">There are about {spots.length} Spots listed till Now. You can add more! </h2>
+                </div>
             </Slide>
             {/* the LIST OF ALL SPOTS */}
             <div data-aos="fade-up" data-aos-duration="3000" >
                 <table className="table">
                         <thead className='mx-0 text-center'>
                         <tr>
-                            <th>
+                            <th className='hidden md:flex'>
+                                <label>
+                                    <input type="checkbox" className="checkbox" />
+                                </label>
                             </th>
                             <th>Spot Name</th>
                             <th>Country</th>
@@ -89,14 +94,14 @@ const MyList = () => {
                         <tbody>
                             {
                                 spots.map(sp=>  <tr key={sp._id}>
-                                    <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
+                                    <th  className='hidden md:flex'>
+                                        <label>
+                                            <input type="checkbox" className="checkbox" />
+                                        </label>
                                     </th>
                                     <td>
                                         <div className="flex items-center gap-3">
-                                            <div className="avatar">
+                                            <div className="avatar hidden md:flex">
                                             <div className="mask mask-squircle w-12 h-12">
                                                 <img src={sp.photo} />
                                             </div>
@@ -119,9 +124,10 @@ const MyList = () => {
                                         <Link to={`/updateSpot/${sp._id}`}>
                                                 <button className="btn basic-btn btn-sm">Update</button>
                                         </Link>
+                                        <button onClick={()=>handleDelete(sp._id)} className="btn text-white btn-error btn-sm font-bold flex mt-2 md:m-0 md:hidden ">Delete</button>
                                     </th>
-                                    <th>
-                                        <button onClick={()=>handleDelete(sp._id)} className="btn text-white btn-error btn-sm font-bold">Delete</button>
+                                    <th className='hidden md:flex'>
+                                        <button onClick={()=>handleDelete(sp._id)} className="btn text-white btn-error btn-sm font-bold mt-2">Delete</button>
                                     </th>
                                 </tr> )
                             }

@@ -20,28 +20,18 @@ const CountriesSection = () => {
             <div data-aos="fade-up" data-aos-duration="3000" className='grid grid-cols-1 gap-6 mb-16'>
                     {
                         countries && countries.map(country=> 
-                    <div key={country._id} className="card lg:card-side bg-base-100 shadow-xl">
-                        <div className='w-1/3'>
-                            <figure  className=''><img className='rounded-2xl' src={country.photo} /></figure>
+                    <div key={country._id} className="card lg:card-side bg-base-100 shadow-xl p-4">
+                        <div className='w-full md:w-1/3'>
+                            <figure  className=''><img className='rounded-xlj' src={country.photo} /></figure>
                         </div>
-                        <div className="text-left ml-6 w-2/3">
+                        <div className="text-left ml-6 w-full md:w-2/3 ">
                             <h2 className="card-title theme-color text-3xl">{country.country} </h2>
                             <p className='my-6'> {country.description} </p>
-                            <div className="card-actions justify-start mt-6">
+                            <div className="card-actions justify-start my-3">
                             <button className="btn basic-btn">View Details</button>
                             </div>
                         </div>
                     </div>
-                    // <div key={country._id} className="card bg-base-100 shadow-xl image-full">
-                    //     <figure><img src={country.photo}/></figure>
-                    //     <div className="card-body text-center">
-                    //         <h2 className="card-title text-left">{country.country} </h2>
-                    //         <p className='text-left' >{country.description} </p>
-                    //         <div className="card-actions justify-start">
-                    //         <button className="btn basic-btn">Buy Now</button>
-                    //         </div>
-                    //     </div>
-                    // </div>
                         )
                     }
             </div>
