@@ -76,8 +76,6 @@ const AddTouristSpot = () => {
                                     <label className="label">
                                         <span className="label-text">Short Description</span>
                                     </label>
-                                    {/* <input type="text" placeholder="Describe the Spot . . ."
-                                    name="description" className="text text-bordered h-[236px] border border-base-content border-1 rounded-lg p-6" required /> */}
                                     <textarea className="textarea textarea-bordered h-[236px]" name="description" placeholder="Describe the spot . . ."></textarea>
                                 </div>
                             </div>
@@ -151,20 +149,8 @@ const AddTouristSpot = () => {
                             </div>
                             {/* ------------------------------------ */}
                         </div>
-                        {/* --------PASSWORD------ */}
-                        {/* <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Password</span>
-                        </label>
-                        <input type="password" placeholder="password" className="input input-bordered" required />
-                        <label className="label">
-                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                        </label>
-                        </div> */}
-
-
-                        <div className="form-control mt-6">
-                            {/* <button className="btn basic-btn">Add</button> */}
+                        {/* Submit Button */}
+                         <div className="form-control mt-6">
                             <input type="submit" value="Add" className="btn basic-btn" />
                         </div>
                     </form>

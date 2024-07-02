@@ -53,16 +53,16 @@ Start the server
 
 ## Support
 
-For support, email archetypedesigners@gmail.com or join our Slack channel.
+For support, email afroz_faria03@yahoo.com or join our Slack channel.
 
 
-## Acknowledgements
+## Technologies Used
 
  - [Tailwind CSS](https://tailwindcss.com/)
  - [Daisy UI](https://daisyui.com/)
  - [React Router](https://reactrouter.com/en/main)
-  - [Fire Base](https://console.firebase.google.com/)
-
+ - [Fire Base](https://console.firebase.google.com/)
+ - [MongoDB](https://www.mongodb.com/)
 
 ## nom package used for challenge task
 

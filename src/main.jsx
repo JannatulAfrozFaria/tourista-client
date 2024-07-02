@@ -67,15 +67,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/addTouristSpot',
-        element: <PrivateRoute>
-                      <AddTouristSpot></AddTouristSpot>
-                </PrivateRoute>
+        element:  <AddTouristSpot></AddTouristSpot>
+                // <PrivateRoute>
+                //       <AddTouristSpot></AddTouristSpot>
+                // </PrivateRoute>
       },
       {
         path: '/myList',
-        element: <PrivateRoute>
-                    <MyList></MyList>
-                </PrivateRoute>
+        element: <MyList></MyList>
+                // <PrivateRoute>
+                //     <MyList></MyList>
+                // </PrivateRoute>
         // loader: () => fetch('https://tourista-server.vercel.app/spot')         
       },
       {
