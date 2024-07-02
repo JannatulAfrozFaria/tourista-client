@@ -64,7 +64,7 @@ For support, email afroz_faria03@yahoo.com or join our Slack channel.
  - [Fire Base](https://console.firebase.google.com/)
  - [MongoDB](https://www.mongodb.com/)
 
-## nom package used for challenge task
+## npm package explored in this project
 
  - [React Awesome reveal](https://www.npmjs.com/package/react-awesome-reveal)
   - [Lottie React](https://www.npmjs.com/package/lottie-react)
