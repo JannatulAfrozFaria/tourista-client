@@ -5,7 +5,7 @@ const SpotCard = ({sp}) => {
     const { _id,photo, spot, description,country,location,cost,seasonality,time,visitors,username,email} = sp;
     return (
         <div className="card-side bg-base-100 shadow-xl">
-            <figure><img src={photo} alt="Album"/></figure>
+            <figure><img className='h-[280px]' src={photo} alt="Album"/></figure>
             <div className="card-body">
                 <h2 className="card-title">Tourist Spot: {spot} </h2>
                 <div className="text-left">
