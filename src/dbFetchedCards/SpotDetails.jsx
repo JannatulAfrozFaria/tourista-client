@@ -18,7 +18,7 @@ const SpotDetails = () => {
                     <p className='theme-light font-medium'> <span className='font-semibold text-gray-500'>Average Cost:</span> {cost} </p>
                     <p className='theme-light font-medium' > <span className='font-semibold text-gray-500'>Seasonality :</span> {seasonality} </p>
                     <p className='theme-light font-medium' > <span className='font-semibold text-gray-500'>Travel Time : </span> {time} </p>
-                    {/* <p className='theme-light font-medium'> <span className='font-semibold text-gray-500'>Total Visitors Per Year:</span> {visitors} </p> */}
+                    <p className='theme-light font-medium'> <span className='font-semibold text-gray-500'>Visitors:</span> {visitors} </p>
                 </div>
                 <button className='btn basic-btn '>
                             <Link to='/' >Go to Home</Link>
