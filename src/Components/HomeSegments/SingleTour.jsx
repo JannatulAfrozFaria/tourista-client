@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 const SingleTour = ({tour}) => {
     const {country_name,tour_description,destinations_visited,total_persons_attended,occurring_date,image} = tour;
     return (
-        <div className="hero bg-base-200 border rounded-3xl p-4">
-            <div className="hero-content flex-col lg:flex-row gap-8">
-                <div className='w-full md:w-1/2 h-3/4'>
-                    <img className=' border rounded-3xl h-full' src={image} />
+        <div className="hero bg-base-200 border rounded-3xl p-4 md:p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 p-4 gap-6 md:gap-8 items-end">
+                <div className='w-full'>
+                    <img className=' w-full border rounded-3xl h-[200px] md:h-[380px]' src={image} />
                 </div>
-                <div className='w-full md:w-1/2'>
+                <div className='w-full md:w-2/3'>
                     <h1 className="text-3xl font-bold text-left mb-2"> {country_name} Tour </h1>
                     <div className='text-left text-gray-500'>
                             <div > 
