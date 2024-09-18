@@ -20,8 +20,8 @@ const Home = () => {
             </Fade>
             <TouristSpots></TouristSpots>
             <CountriesSection></CountriesSection>
-            <OurPackages></OurPackages>
             <PreviousTours></PreviousTours>
+            <OurPackages></OurPackages>
         </div>
     );
 };
