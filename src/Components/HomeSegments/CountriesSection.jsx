@@ -22,7 +22,7 @@ const CountriesSection = () => {
                         countries && countries.map(country=> 
                     <div key={country._id} className="card lg:card-side bg-base-100 shadow-xl p-4">
                         <div className='w-full md:w-1/3'>
-                            <figure  className=''><img className='rounded-xlj' src={country.photo} /></figure>
+                            <figure  className=''><img className='rounded-2xl' src={country.photo} /></figure>
                         </div>
                         <div className="text-left ml-1 lg:ml-6 w-full md:w-2/3 ">
                             <h2 className="card-title theme-color mt-4 md:mt-0 text-3xl">{country.country} </h2>

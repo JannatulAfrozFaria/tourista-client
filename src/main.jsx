@@ -22,8 +22,7 @@ import PrivateRoute from './Components/Pages/PrivateRoute.jsx';
 import UpdateSpot from './dbFetchedCards/UpdateSpot.jsx';
 import TouristSpotDetails from './Components/HomeSegments/TouristSpotDetails.jsx';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import 'aos/dist/aos.css'; 
 AOS.init();
 
 
@@ -42,7 +41,6 @@ const router = createBrowserRouter([
         path: 'touristSpotDetails/:id',
         element: <TouristSpotDetails></TouristSpotDetails>,
         loader: ({params}) => fetch(`https://tourista-server.vercel.app/countries/${params.id}`)
-        // loader: ()=>fetch('https://tourista-server.vercel.app/countries/')
       },
       {
         path: '/packages',

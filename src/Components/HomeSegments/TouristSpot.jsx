@@ -6,7 +6,7 @@ const TouristSpot = ({touristSpot}) => {
     return (
         <div className="grid grid-cols-1 bg-base-100 shadow-xl p-8 rounded-3xl">
             <div>
-                <figure className='w-full'><img className='border rounded-2xl h-[230px] md:h-[450px]' src={photo} alt="Movie"/></figure>
+                <figure className='w-full'><img className='border rounded-2xl h-[230px] md:h-[400px]' src={photo} alt="Movie"/></figure>
             </div>
             <div className="p-4 text-left">
                 <h2 className="card-title theme-color">{spot} </h2>

@@ -12,7 +12,7 @@ const TouristSpotDetails = () => {
                     <p className='my-4'> {location} , {country} </p>
                     <img src={photo} className=" rounded-lg shadow-2xl w-full md:w-1/2" />
                     <div>
-                    <p className="py-6 "> {description} </p> 
+                    <p className="py-6 w-1/2 mx-auto "> {description} </p> 
                     <div className=''>
                     <p className='theme-light font-medium' > <span className='font-semibold text-gray-500'>Per Person Cost :</span> {cost} </p>
                     <p className='theme-light font-medium' > <span className='font-semibold text-gray-500'>Visitors Per Year:</span> {visitors} </p>
