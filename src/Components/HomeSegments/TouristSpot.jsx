@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const TouristSpot = ({ touristSpot }) => {
     const { _id, photo, country, spot, location, time, visitors, description } = touristSpot;
     return (
-        <div className="grid grid-cols-2 items-center bg-base-100 shadow-xl shadow-green-100 p-6 rounded-3xl">
+        <div className="grid grid-cols-2 gap-4 items-end bg-base-100 shadow-xl shadow-green-100 p-3 md:p-4 rounded-3xl">
             <div>
-                <img className='rounded-2xl h-[200px]' src={photo} alt="Movie" />
+                <img className='rounded-2xl h-[230px] md:h-[180px]' src={photo} alt="Movie" />
             </div>
-            <div className="p-4 text-left grid grid-cols-1 items-end">
-                <h2 className="text-2xl theme-color">{spot} </h2>
+            <div className=" text-left grid grid-cols-1 items-end">
+                <h2 className="text-xl theme-color">{spot} </h2>
                 <div className='py-2'>
                     <p className=''>{location} , {country}</p>
                     {/* <p className=''>{country}</p> */}
