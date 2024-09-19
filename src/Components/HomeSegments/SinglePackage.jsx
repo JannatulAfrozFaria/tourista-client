@@ -5,7 +5,7 @@ const SinglePackage = ({pack}) => {
     const {id,package_name,description,cost_per_person,maximum_allowable_persons,facilities,image} = pack;
     return (
         <div className='h-full'>
-            <div className="card  lg:w-full h-full bg-base-100 shadow-xl">
+            <div className="card  lg:w-full h-full bg-base-100 shadow-xl shadow-green-50">
                 <figure><img className='w-full h-[180px] md:h-[280px]'  src={image} alt="Estate" /></figure>
                 <div className="card-body">
                     <h2 className="card-title theme-color">
