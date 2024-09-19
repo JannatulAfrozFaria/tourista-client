@@ -1,24 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const TouristSpot = ({touristSpot}) => {
-    const {_id,photo,country,spot,location,time,visitors,description} = touristSpot;
+const TouristSpot = ({ touristSpot }) => {
+    const { _id, photo, country, spot, location, time, visitors, description } = touristSpot;
     return (
-        <div className="grid grid-cols-1 bg-base-100 shadow-xl p-8 rounded-3xl">
+        <div className="grid grid-cols-2 items-center bg-base-100 shadow-xl shadow-green-100 p-6 rounded-3xl">
             <div>
-                <figure className='w-full'><img className='border w-full rounded-2xl h-[230px] md:h-[400px]' src={photo} alt="Movie"/></figure>
+                <img className='rounded-2xl h-[200px]' src={photo} alt="Movie" />
             </div>
-            <div className="p-4 text-left">
-                <h2 className="card-title theme-color">{spot} </h2>
-                <p className=''>{location} , {country}</p>
-                {/* <p className=''>{country}</p> */}
-                <p className='text-sm'>Travel Time:{time} </p>
-                <p className='text-sm'>Visitors Per Year:{visitors} </p>
-                
-                <div className="card-actions justify-start">
-                <button className="btn basic-btn mt-4">
-                   <Link to={`touristSpotDetails/${_id}`} > View Details</Link>
-                </button>
+            <div className="p-4 text-left grid grid-cols-1 items-end">
+                <h2 className="text-2xl theme-color">{spot} </h2>
+                <div className='py-2'>
+                    <p className=''>{location} , {country}</p>
+                    {/* <p className=''>{country}</p> */}
+                    <p className='text-sm'>Travel Time:{time} </p>
+                    <p className='text-sm'>Visitors Per Year : {visitors} </p>
+                </div>
+                <div className="">
+                    <button className="btn basic-btn">
+                        <Link to={`touristSpotDetails/${_id}`} > View Details</Link>
+                    </button>
                 </div>
             </div>
         </div>

@@ -22,11 +22,11 @@ const CountriesSection = () => {
             <div data-aos="fade-up" data-aos-duration="3000" className='grid  grid-cols-1 md:grid-cols-3 gap-6 mb-16'>
                     {
                         countries && countries.map(country=> 
-                    <div key={country._id} className="grid grid-cols-1 bg-base-100 shadow-xl p-4 bg-gradient-to-b from-green-50 to-white">
+                    <div key={country._id} className="grid grid-cols-1  bg-base-100 shadow-xl p-4 bg-gradient-to-b from-green-50 to-white">
                         <div className='w-full'>
                             <figure  className=''><img className=' w-full rounded-2xl h-[300px]' src={country.photo} /></figure>
                         </div>
-                        <div className="text-left p-2 pl-4">
+                        <div className=" flex flex-col justify-end text-left p-2 pl-4">
                             <h2 className="font-semibold theme-color mt-4 md:mt-0 text-3xl">{country.country} </h2>
                             <p className='my-2 text-justify'> {country.description} </p>
                             <div className="">

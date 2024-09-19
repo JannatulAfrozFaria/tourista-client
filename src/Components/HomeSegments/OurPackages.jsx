@@ -24,13 +24,6 @@ const OurPackages = () => {
                     {
                         packages && packages.map(pack=><SinglePackage key={pack.id} pack ={pack} ></SinglePackage>)
                     }
-{/* 
-                    {packages.map(pack=> 
-                    <SinglePackage
-                        key={pack.id} 
-                        pack={pack}>
-                    </SinglePackage> 
-                    )} */}
             </div>
         </div>
     );
