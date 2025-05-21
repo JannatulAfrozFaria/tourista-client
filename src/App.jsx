@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       
-      <h1>Tourista</h1>
+      <h1>Tourist</h1>
       
     </>
   )
